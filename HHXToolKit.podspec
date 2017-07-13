@@ -8,15 +8,15 @@
 
 Pod::Spec.new do |s|
 
-  s.name         = "HHXToolKit"
+  s.name         = "ToolKit"
   s.version      = "0.0.1"
-  s.summary      = "A short description of HHXToolKit."
-  s.homepage     = "http://115.239.171.50:8446/summary/~chenweidong%2FHHXToolKit.git"
+  s.summary      = "A short description of ToolKit."
+  s.homepage     = "https://github.com/MarsCWD/ToolKit"
   s.license      = "MIT"
   s.author       = { "陈卫东" => "cwd545113097@126.com" }
   s.source_files = "Classes", "HHXToolKIt/Classes/*.{h,m}"
   s.resource 	 = 'HHXToolKIt/Images/*'
-  s.source       = { :git => "http://chenweidong@115.239.171.50:8446/r/~chenweidong/HHXToolKit.git", :tag => s.version}
+  s.source       = { :git => "https://github.com/MarsCWD/ToolKit", :tag => s.version}
   s.requires_arc = true
   s.platform     = :ios, "8.0"
 

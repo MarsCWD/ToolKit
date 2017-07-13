@@ -14,11 +14,11 @@
 + (void)show:(NSString *)text icon:(NSString *)icon view:(UIView *)view afterDelay:(NSTimeInterval)delay {
     if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    hud.detailsLabelText = text;
-    hud.detailsLabelFont = [UIFont systemFontOfSize:14];
+    hud.detailsLabel.text = text;
+    hud.detailsLabel.font = [UIFont systemFontOfSize:14];
     hud.mode = MBProgressHUDModeCustomView;
     hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:icon]];
-    [hud hide:YES afterDelay:delay];
+    [hud hideAnimated:YES afterDelay:delay];
 }
 
 #pragma mark - 显示失败信息
@@ -73,8 +73,8 @@
 + (MBProgressHUD *)showMessage:(NSString *)message toView:(UIView *)view {
     if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    hud.detailsLabelText = message;
-    hud.detailsLabelFont = [UIFont systemFontOfSize:14];
+    hud.detailsLabel.text = message;
+    hud.detailsLabel.font = [UIFont systemFontOfSize:14];
     return hud;
 }
 
